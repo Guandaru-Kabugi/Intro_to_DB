@@ -22,7 +22,7 @@ def create_database():
         mycursor.execute(query)
         mycursor.execute(query2)
         print("Database 'alx_book_store' created successfully!")
-    except Exception:
+    except mysql.connector.Error:
         print("Error. Failed to connect Database 'alx_book_store' Successfully.")
     finally:
         mycursor.close()
